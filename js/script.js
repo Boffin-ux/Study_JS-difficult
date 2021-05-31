@@ -1,15 +1,53 @@
-const num = 266219;
+// усложненное задание п.1
+let lang = 'en';
 
-const arr = String(num).split('');
+const rusDaysName = [
+   'Воскресенье',
+   'Понедельник',
+   'Вторник',
+   'Среда',
+   'Четверг',
+   'Пятница',
+   'Суббота'
+];
+const engDaysName = [
+   'Sunday',
+   'Monday',
+   'Tuesday',
+   'Wednesday',
+   'Thursday',
+   'Friday',
+   'Saturday '
+];
 
-let sum = 1;
+if (lang === 'ru') {
+   console.log(rusDaysName);
+} else if (lang === 'en') {
+   console.log(engDaysName);
+} else {
+   console.log('Ошибка ввода');
+}
 
-arr.forEach((index) => {
-   sum *= index;
-});
+switch (lang) {
+   case 'ru':
+      console.log(rusDaysName);
+      break;
+   case 'en':
+      console.log(engDaysName);
+      break;
+   default:
+      console.log('Ошибка ввода');
+}
 
-console.log(sum);
+const daysName = [rusDaysName, engDaysName, 'Ошибка ввода'];
+console.log((lang === 'ru') ? daysName[0] :
+   (lang === 'en') ? daysName[1] :
+      daysName[2]);
 
-const degree = sum ** 3;
+// усложненное задание п.2
+let namePerson = 'кто-то';
+let message = (namePerson === 'Артем') ? 'директор' :
+   (namePerson === 'Максим') ? 'преподаватель' :
+      'Студент';
 
-console.log(String(degree).substr(0, 2));
+console.log(message);
