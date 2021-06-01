@@ -1,59 +1,16 @@
-// усложненное задание п.1
-let lang = 'en';
+'use strict';
 
-const rusDaysName = [
-   'Воскресенье',
-   'Понедельник',
-   'Вторник',
-   'Среда',
-   'Четверг',
-   'Пятница',
-   'Суббота'
-];
-const engDaysName = [
-   'Sunday',
-   'Monday',
-   'Tuesday',
-   'Wednesday',
-   'Thursday',
-   'Friday',
-   'Saturday '
-];
-// усложненное задание п.1.a
-if (lang === 'ru') {
-   console.log(rusDaysName);
-} else if (lang === 'en') {
-   console.log(engDaysName);
-} else {
-   console.log('Ошибка ввода');
-}
-// усложненное задание п.1.b
-switch (lang) {
-   case 'ru':
-      console.log(rusDaysName);
-      break;
-   case 'en':
-      console.log(engDaysName);
-      break;
-   default:
-      console.log('Ошибка ввода');
-}
-// усложненное задание п.1.c
-const daysName = [rusDaysName, engDaysName, 'Ошибка ввода'];
-console.log((lang === 'ru') ? daysName[0] :
-   (lang === 'en') ? daysName[1] :
-      daysName[2]);
+let getValue = ` Lorem ipsum dolor sit amet, consectetur adipisicing 
+elit. Qui dicta minus molestiae vel beatae natus eveniet ratione `;
 
-const arr = {
-   'ru': ['Понедельник, Вторник, Среда, Четверг, Пятнца, Суббота, Воскресенье'],
-   'en': ['Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday']
+const getStr = str => {
+   if (typeof str !== 'string') {
+      return 'в качестве аргумента передана не строка';
+   } else if (str.length > 30) {
+      return str.trim().substring(0, 30) + '...';
+   } else {
+      return str.trim();
+   }
 };
-console.log(arr[lang]);
 
-// усложненное задание п.2
-let namePerson = 'кто-то';
-let message = (namePerson === 'Артем') ? 'директор' :
-   (namePerson === 'Максим') ? 'преподаватель' :
-      'Студент';
-
-console.log(message);
+console.log(getStr(getValue));
