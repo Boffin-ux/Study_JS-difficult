@@ -1,16 +1,28 @@
 'use strict';
 
-let getValue = ` Lorem ipsum dolor sit amet, consectetur adipisicing 
-elit. Qui dicta minus molestiae vel beatae natus eveniet ratione `;
+// Задание №1
+let arr = ['77', '21', '123', '95', '324', '489', '6578'];
 
-const getStr = str => {
-   if (typeof str !== 'string') {
-      return 'в качестве аргумента передана не строка';
-   } else if (str.length > 30) {
-      return str.trim().substring(0, 29) + '...';
-   } else {
-      return str.trim();
+arr.forEach(item => {
+   if (item.slice(0, 1) === '2' || item.slice(0, 1) === '4') {
+      console.log(item);
    }
+});
+
+// Задание №2
+const isPrime = num => {
+   for (let i = 2; i < num; i++) {
+      if (num % i === 0) {
+         return false;
+      }
+   }
+   return num > 1;
 };
 
-console.log(getStr(getValue));
+for (let i = 1; i <= 100; i++) {
+   if (isPrime(i) === true) {
+      console.log(`${i} - Делители этого числа: 1 и ${i}`);
+   }
+}
+
+
