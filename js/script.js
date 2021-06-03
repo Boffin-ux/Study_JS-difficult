@@ -36,7 +36,7 @@ const startGame = () => {
                const newGame = confirm('Поздравляю, Вы угадали!!! Хотели бы сыграть еще?');
                attemptNum = 10;
                if (newGame) {
-                  return isTrue();
+                  return startGame();
                }
             } else {
                alert('Введите число от 1 до 100');
@@ -50,7 +50,7 @@ const startGame = () => {
          const newGame = confirm('Попытки закончились, хотите сыграть еще?');
          attemptNum = 10;
          if (newGame) {
-            return isTrue();
+            return startGame();
          }
       }
    };
