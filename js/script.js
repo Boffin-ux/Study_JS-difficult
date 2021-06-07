@@ -41,9 +41,10 @@ setInterval(() => {
       months = data.getMonth(),
       hours = data.getHours(),
       minutes = data.getMinutes(),
-      seconds = data.getSeconds();
+      seconds = data.getSeconds(),
+      today = `${week[days - 1].slice(0, 1).toUpperCase()}${week[days - 1].slice(1)}`;
 
-   addPOne.textContent = `a) Сегодня ${week[days - 1]}, ${date} ${fMonth[months]} ${years} года,
+   addPOne.textContent = `a) Сегодня ${today}, ${date} ${fMonth[months]} ${years} года,
       ${hours} ${addDeclension(hours, ['час', 'часов', 'часа'])} 
       ${minutes} ${addDeclension(minutes, ['минута', 'минут', 'минуты'])} 
       ${seconds} ${addDeclension(seconds, ['секунда', 'секунд', 'секунды'])}`;
