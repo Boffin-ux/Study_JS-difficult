@@ -11,7 +11,7 @@ week.forEach((item, index) => {
       p.style.fontWeight = 'bold';
       div.append(p);
       console.log(`%c${item}`, 'font-weight: bold');
-   } else if (index === 5 || index === 6) {
+   } else if (index > 4) {
       p.innerText = item;
       p.style.fontStyle = 'italic';
       div.append(p);
