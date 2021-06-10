@@ -1,0 +1,15 @@
+.wrapper{
+   display: flex;
+   max-width: 1140px;
+   margin: 15% auto;
+   justify-content: space-between;
+   flex-direction: column;
+   align-items: center;
+}
+.color {
+   font-size: 3em;
+}
+.change {
+   font-size: 2em;
+   color:#000;
+}
